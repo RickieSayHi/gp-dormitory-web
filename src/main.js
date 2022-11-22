@@ -4,7 +4,7 @@ import router from './router'
 import store from './store'
 
 
-import i18n from './lang'; // Internationalization
+// import i18n from './lang'; // Internationalization
 // import Avue from '@smallwei/avue';
 import '@smallwei/avue/lib/index.css';
 
@@ -44,16 +44,16 @@ import '@smallwei/avue/lib/index.css';
 // });
 
 Vue.use(window.AVUE, {
-  size: 'small',
-  tableSize: 'small',
-  calcHeight: 65,
-  i18n: (key, value) => i18n.t(key, value)
+    size: 'small',
+    tableSize: 'small',
+    calcHeight: 65
+    // i18n: (key, value) => i18n.t(key, value)
 });
 
 Vue.config.productionTip = false
 
 new Vue({
-  router,
-  store,
-  render: h => h(App)
+    router,
+    store,
+    render: h => h(App)
 }).$mount('#app')
